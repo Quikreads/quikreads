@@ -1,47 +1,57 @@
 <!DOCTYPEhtml>
 <html>
-<head>
-  <!-- Meta Description -->
-  <meta name="description" content="Quikreads is a startup book company whose goal is to get good books to everyone.">
-  <!-- Meta Viewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Meta Charset -->
-  <meta charset="UTF-8">
-  <!-- Website CSS -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script><!--Firebase-->
-  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script><!--Firestore-->
-  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script><!--Auth-->
-  <!-- Firebase UI -->
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.4.0/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.0/firebaseui.css" />
-  <!-- Title -->
-  <title>Quikreads</title>
-</head>
 
-<body>
-  <nav>
-    <h1 onclick="window.location.href = 'index.html'">
-      Quikreads
-    </h1>
-    <ul>
-      <li>Read</li>
-      <li>Write</li>
-      <li>Explore</li>
-    </ul>
-    <i class="fab fa-github" style="position: absolute; right: 10px; top: 20px; font-size: 30px; color: #fff4cf;" onclick="window.location.href = 'https://github.com/quikreads/quikreads'"></i>
-  </nav>
+  <head>
+    <!-- Meta Description -->
+    <meta name="description" content="Quikreads is a startup book company whose goal is to get good books to everyone.">
+    <!-- Meta Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Charset -->
+    <meta charset="UTF-8">
+    <!-- Website CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+    <!--Firestore-->
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+    <!--Auth-->
+    <!-- Firebase UI -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.4.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.0/firebaseui.css" />
+    <!-- Title -->
+    <title>Quikreads</title>
+  </head>
+
+  <body>
+    <nav>
+      <h1 onclick="window.location.href = 'index.html'">
+        Quikreads
+      </h1>
+      <ul>
+        <li>Read</li>
+        <li>Write</li>
+        <li>Explore</li>
+      </ul>
+      <i class="fab fa-github" style="position: absolute; right: 10px; top: 20px; font-size: 30px; color: #fff4cf;" onclick="window.location.href = 'https://github.com/quikreads/quikreads'"></i>
+    </nav>
     <div id="home-page">
       <div id="mobile-options">
-        <div style="background-color: #ff5656">Read</div><div style="background-color: #68ff88">Write</div><div style="background-color: #87dfff">Explore</div>
+        <div style="background-color: #ff5656">Read</div>
+        <div style="background-color: #68ff88">Write</div>
+        <div style="background-color: #87dfff">Explore</div>
       </div>
     </div>
-  <!--JS Links-->
-  <script src="js/db.js"></script>
-</body>
+    <div id="login-page">
+      <div id="firebaseui-auth-container"></div>
+    </div>
+    <!--JS Links-->
+    <script src="js/db.js"></script>
+  </body>
+
 </html>
