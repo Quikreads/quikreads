@@ -11,3 +11,7 @@ firebase.initializeApp(config);
 
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
+
+//Initialize Auth through Firebase
+var firebase = require('firebase');
+var firebaseui = require('firebaseui');
