@@ -29,8 +29,22 @@ var uiConfig = {
     window.location.assign('<your-privacy-policy-url>');
   }
 };
-
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
-// The start method will wait until the DOM is loaded
-ui.start('#firebaseui-auth-container', uiConfig);
+
+function page() {
+  return window.location.href.split('?')[1];
+}
+
+if(!page()) {
+  document.getElementById("home-page").style.display = "block";
+} else {
+  if(document.getElementById(page() + "-page")) {
+    document.getElementById(page() + "-page").style.display = "block";
+    if(page() == "login") {
+      ui.start('#firebaseui-auth-container', uiConfig);
+    }
+  } else {
+    document.getElementById("404-page").style.display = "block";
+  }
+}
