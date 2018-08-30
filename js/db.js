@@ -18,7 +18,7 @@ firestore.settings(settings);
 var db = firebase.firestore();
 
 var uiConfig = {
-  signInSuccessUrl: 'quikreads.tk',
+  signInSuccessUrl: '',
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -31,6 +31,7 @@ var uiConfig = {
 };
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
+ui.start('#firebaseui-auth-container', uiConfig);
 
 function page() {
   return window.location.href.split('?')[1];
@@ -41,9 +42,6 @@ if(!page()) {
 } else {
   if(document.getElementById(page() + "-page")) {
     document.getElementById(page() + "-page").style.display = "block";
-    if(page() == "login") {
-      ui.start('#firebaseui-auth-container', uiConfig);
-    }
   } else {
     document.getElementById("404-page").style.display = "block";
   }
