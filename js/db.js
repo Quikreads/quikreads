@@ -17,21 +17,8 @@ firestore.settings(settings);
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
 
-var uiConfig = {
-  signInSuccessUrl: '',
-  signInOptions: [
-    // Leave the lines as is for the providers you want to offer your users.
-    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    firebase.auth.EmailAuthProvider.PROVIDER_ID
-  ],
-  tosUrl: '<your-tos-url>',
-  privacyPolicyUrl: function() {
-    window.location.assign('<your-privacy-policy-url>');
-  }
-};
-// Initialize the FirebaseUI Widget using Firebase.
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
-ui.start('#firebaseui-auth-container', uiConfig);
+var provider = new firebase.auth.GoogleAuthProvider();
+
 
 function page() {
   return window.location.href.split('?')[1];
