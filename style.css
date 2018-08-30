@@ -73,3 +73,23 @@ h1 {
   margin-left: 10px;
   display: inline-block;
 }
+
+#home-page #home-page-messages div {
+  position: absolute;
+  width: 90%;
+  background-color: #efefef;
+  margin: 2.55%;
+  border-radius: 5px;
+  padding: 1% 2.5%;
+}
+
+@media only screen and (min-width: 800px) {
+  #home-page #home-page-messages div {
+    position: absolute;
+    width: 45%;
+    background-color: #efefef;
+    margin: 2.55%;
+    border-radius: 5px;
+    padding: 1% 2.5%;
+  }
+}
