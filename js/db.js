@@ -11,17 +11,3 @@ firebase.initializeApp(config);
 
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
-
-//Initialize Auth through Firebase
-var firebase = require('firebase');
-var firebaseui = require('firebaseui');
-
-//Set up UI
-ui.start('#firebaseui-auth-container', {
-  signInOptions: [
-    firebase.auth.EmailAuthProvider.PROVIDER_ID
-  ],
-  // Other config options...
-});
-
-var provider = new firebase.auth.GoogleAuthProvider();
